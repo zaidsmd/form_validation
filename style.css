@@ -5,7 +5,8 @@
     --primary-dark-color: #3945BA;
     --secondary-color: #FFC107;
     --secondary-dark-color: #F2B705;
-    --gray-color: #D9D9D9;
+    --gray-color: rgb(229, 229, 229);
+    font-size: 16px;
 }
 
 * {
@@ -15,16 +16,209 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+    outline: none;
+    color: var(--primary-dark-color);
 }
+
 body {
-    background-color: var(--primary-dark-color);
+    background-image: url("https://solicode.co/images/slides/slide1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     min-height: 100vh;
-    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(80%);
 }
-main    {
+
+main {
     background-color: #FFFFFF;
-    border-radius: 30px;
+    border-radius: 2rem;
     overflow: hidden;
     display: flex;
     flex-direction: row;
+    width: 70%;
+    filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.4));
+}
+#pic    {
+    width: 60%;
+    background-image: url("https://www.fm5.ma/sites/default/files/2021-09/solicode-gal5_0.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#pic:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(162.88deg, rgba(13, 110, 253, 0.55) 54.55%, rgba(137, 152, 127, 0) 65.53%, rgba(255, 193, 7, 0.55) 82.36%);
+    mix-blend-mode: color;
+}
+#formSide {
+    width: -webkit-fill-available;
+    padding: 0 3rem 3rem 3rem;
+}
+#logo   {
+    width: 30%;
+}
+#logo img   {
+    width: 100%;
+}
+#formSide form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#formSide form div:has(.input-group:last-child:nth-child(2)) {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+#formSide form div:has(.input-group:last-child:nth-child(2)) .input-group {
+    width: 50%;
+}
+
+input:focus-within + .floating-label,
+input:not([value=""]) + .floating-label {
+    top: -30%;
+    bottom: 10px;
+    left: 20px;
+    scale: 0.8;
+    opacity: 1;
+    background-color: #FFFFFF;
+}
+
+input:focus-within {
+    border: 1px solid var(--primary-color);
+    border-radius: 0.2rem;
+    line-height: 2.3rem;
+}
+
+input:focus + .floating-label {
+    color: var(--primary-color);
+}
+
+fieldset {
+    outline: none;
+    border-radius: 0.3rem;
+    border: 1px solid rgb(118, 118, 118);
+    padding: 1% 1% 2% 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+legend {
+    color: var(--primary-dark-color);
+    margin-left: 0.5rem;
+    padding: 0.2rem;
+}
+
+.floating-label {
+    position: absolute;
+    pointer-events: none;
+    opacity: 50%;
+    left: 20px;
+    top: 0.7rem;
+    transition: 0.2s ease all;
+    height: fit-content;
+    padding: 0 0.2rem;
+}
+
+[type="text"] {
+    font-size: 14px;
+    width: 100%;
+    line-height: 2.4rem;
+    padding-left: 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid rgb(118, 118, 118);
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group:has([type="radio"]) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid rgb(118, 118, 118);
+}
+
+.input-group:has([type="radio"]) label {
+    font-weight: 300;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    border: 0.15em solid var(--primary-dark-color);
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1rem 1rem var(--primary-color);
+    box-sizing: border-box;
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+fieldset:has(.input-group:nth-child(5)) .input-group {
+    width: 29%;
+}
+select  {
+    width: 100%;
+    border: none;
+    background-color: var(--gray-color);
+    border-radius: 0.3rem;
+    padding: 1rem;
+    overflow: clip;
+}
+option {
+    background-color: #ececec;
+}
+option[selected] {
+    background-color: var(--primary-color) !important;
+}
+option  {
+    line-height: 2rem !important;
+}
+button{
+    padding: 1%;
+    border: none;
+    outline: none;
+    background-color: var(--primary-dark-color);
+    color: #FFFFFF;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+button:hover    {
+    background-color: rgba(57, 69, 186, 0.93);
 }
