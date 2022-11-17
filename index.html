@@ -12,13 +12,13 @@
 </head>
 <body>
 <main>
-    <div id="pic">
-    </div>
+    <div id="pic"></div>
     <div id="formSide">
         <div id="logo">
             <img src="https://solicode.co/images/logo/Solicode_logo_without_slogan_for_white_BG.svg" alt="Logo"  >
         </div>
-        <p></p>
+        <p>Please fill the form down and choose what club you want to join</p>
+        <p>Note : all the fields are required</p>
         <form>
             <div>
                 <div class="input-group">
@@ -73,16 +73,17 @@
                 </div>
             </fieldset>
             <fieldset>
-                <legend>Clubs</legend>
-                <select name="" multiple>
+                <legend><label for="clubs">Clubs</label></legend>
+                <select id="clubs" multiple>
                     <option value="">Chess</option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option value="">Robotique</option>
+                    <option value="">Musique</option>
                 </select>
             </fieldset>
             <button type="button">Join</button>
         </form>
     </div>
 </main>
+<script src="script.js"></script>
 </body>
 </html>

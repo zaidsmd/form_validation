@@ -66,10 +66,18 @@ main {
 #logo img   {
     width: 100%;
 }
+p{
+    color: black;
+}
+p:last-of-type {
+    color: var(--primary-dark-color);
+    font-size: 0.9rem;
+}
 #formSide form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 #formSide form div:has(.input-group:last-child:nth-child(2)) {
@@ -197,17 +205,26 @@ select  {
     border: none;
     background-color: var(--gray-color);
     border-radius: 0.3rem;
-    padding: 1rem;
+    /*padding: 1rem;*/
     overflow: clip;
-}
-option {
-    background-color: #ececec;
-}
-option[selected] {
-    background-color: var(--primary-color) !important;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 option  {
     line-height: 2rem !important;
+    font-size: 1.2rem;
+    background-color: #f3f3f3;
+    padding: 0.3rem 1rem;
+}
+option:not(:last-child){
+    border-bottom: 1px solid rgb(118,118,118);
+}
+
+option:checked   {
+    background-color: var(--primary-color) !important;
+    color : #FFFFFF !important;
 }
 button{
     padding: 1%;
