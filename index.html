@@ -15,18 +15,20 @@
     <div id="pic"></div>
     <div id="formSide">
         <div id="logo">
-            <img src="img/Solicode_logo_without_slogan_for_white_BG.svg" alt="Logo"  >
+            <img src="img/Solicode_logo_without_slogan_for_white_BG.svg" alt="Logo">
         </div>
-        <p>Please fill the form down and choose what club you want to join</p>
-        <p>Note : all the fields are required</p>
+       <div>
+           <p>Please fill the form down and choose what club you want to join</p>
+           <p>Note : all the fields are required</p>
+       </div>
         <form>
             <div>
                 <div class="input-group">
-                    <input type="text" id="name"value="" onkeyup="this.setAttribute('value',this.value);">
+                    <input type="text" id="name" value="" onkeyup="this.setAttribute('value',this.value);">
                     <label class="floating-label" for="name">First Name</label>
                 </div>
-                <div class="input-group" >
-                    <input type="text"  onkeyup="this.setAttribute('value',this.value);" id="lastName" value="">
+                <div class="input-group">
+                    <input type="text" onkeyup="this.setAttribute('value',this.value);" id="lastName" value="">
                     <label class="floating-label" for="lastName">Last Name</label>
                 </div>
             </div>
@@ -36,7 +38,7 @@
             </div>
             <div class="input-group">
                 <input type="text" id="tele" value="" onkeyup="this.setAttribute('value',this.value);">
-                <label for="tele"class="floating-label" >Telephone</label>
+                <label for="tele" class="floating-label">Telephone</label>
             </div>
             <fieldset>
                 <legend>Gendre</legend>
@@ -80,7 +82,7 @@
                     <option value="">Musique</option>
                 </select>
             </fieldset>
-            <button type="button">Join</button>
+            <input type="submit" value="Submit">
         </form>
     </div>
 </main>
