@@ -5,6 +5,7 @@ const telephoneRE = /^(((([+0])212)([675]))\d{8})$|^0([675])\d{8}$/i;
 document.querySelector("form").addEventListener('submit', e => {
     const error = document.querySelectorAll('.errorMsg');
     const inputs = document.querySelectorAll('input');
+    const fieldset = document.querySelectorAll('fieldset')
     let fNameValue = document.querySelector('[name=firstname]').value;
     let lNameValue = document.querySelector('[name=lastname]').value;
     let emailValue = document.querySelector('[name=email]').value;
@@ -17,6 +18,10 @@ document.querySelector("form").addEventListener('submit', e => {
         e.classList.remove('show')
     })
     inputs.forEach(function (e) {
+        e.classList.remove('notValide');
+        e.classList.remove('valide');
+    });
+    fieldset.forEach(function (e) {
         e.classList.remove('notValide');
         e.classList.remove('valide');
     });
@@ -49,16 +54,25 @@ document.querySelector("form").addEventListener('submit', e => {
         document.querySelector('[name=telephone]').classList.add('valide');
     }
     if (gender === null) {
+        document.querySelector('fieldset:has([name=gender])').classList.add('notValide')
         key = false
         error[4].classList.add('show')
+    } else {
+        document.querySelector('fieldset:has([name=gender])').classList.add('valide')
     }
     if (groupe === null) {
+        document.querySelector('fieldset:has([name=group])').classList.add('notValide')
         key = false
         error[5].classList.add('show')
+    } else {
+        document.querySelector('fieldset:has([name=group])').classList.add('valide')
     }
     if (selectedClubs.length === 0 || selectedClubs.length >= 3) {
+        document.querySelector('fieldset:has([name=club])').classList.add('notValide')
         key = false
         error[6].classList.add('show')
+    } else {
+        document.querySelector('fieldset:has([name=club])').classList.add('valide')
     }
     if (key === false) {
         e.preventDefault()
