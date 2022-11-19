@@ -21,67 +21,83 @@
            <p>Please fill the form down and choose what club you want to join</p>
            <p>Note : all the fields are required</p>
        </div>
-        <form action="" >
+        <form action="confirmation.html" >
             <div>
                 <div class="input-group">
                     <input type="text" name="firstname" id="name" value="" onkeyup="this.setAttribute('value',this.value);">
                     <label class="floating-label" for="name">First Name</label>
+                    <p class="errorMsg">First-name must not exceed 30 characters with no special characters or numbers</p>
                 </div>
                 <div class="input-group">
                     <input type="text" name="lastname" onkeyup="this.setAttribute('value',this.value);" id="lastName" value="">
                     <label class="floating-label" for="lastName">Last Name</label>
+                    <p class="errorMsg">Last-name must not exceed 30 characters with no special characters or numbers</p>
                 </div>
             </div>
             <div class="input-group">
                 <input type="text" id="email" name="email" value="" onkeyup="this.setAttribute('value',this.value);">
                 <label class="floating-label" for="email">E-mail</label>
+                <p class="errorMsg">your email should be in this pattern (name.lastname@ofppt.ma)</p>
             </div>
             <div class="input-group">
                 <input type="text" id="tele" name="telephone" value="" onkeyup="this.setAttribute('value',this.value);">
                 <label for="tele" class="floating-label">Telephone</label>
+                <p class="errorMsg">only Moroccan phone format are supported +212(5/6/7) or 0212(5/6/7) or 0(5/6/7)</p>
             </div>
-            <fieldset>
-                <legend>Gendre</legend>
-                <div class="input-group">
-                    <input type="radio" name="gender" value="female" id="female">
-                    <label for="female">Female</label>
-                </div>
-                <div class="input-group">
-                    <input type="radio" name="gender" value="male" id="male">
-                    <label for="male">Male</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Group</legend>
-                <div class="input-group">
-                    <input type="radio" name="group" value="dw-101" id="dw-101">
-                    <label for="dw-101">Dw-101</label>
-                </div>
-                <div class="input-group">
-                    <input type="radio" name="group" value="dw-102" id="dw-102">
-                    <label for="dw-102">Dw-102</label>
-                </div>
-                <div class="input-group">
-                    <input type="radio" name="group" value="dw-103" id="dw-103">
-                    <label for="dw-103">Dw-103</label>
-                </div>
-                <div class="input-group">
-                    <input type="radio" name="group" value="dm-101" id="dm-101">
-                    <label for="dm-101">Dm-101</label>
-                </div>
-                <div class="input-group">
-                    <input type="radio" name="group" value="dm-102" id="dm-102">
-                    <label for="dm-102">Dm-102</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend><label for="clubs">Clubs</label></legend>
-                <select name="club" id="clubs" multiple>
-                    <option value="chess">Chess</option>
-                    <option value="robotique">Robotique</option>
-                    <option value="music">Music</option>
-                </select>
-            </fieldset>
+            <div>
+                <fieldset>
+                    <legend>Gendre</legend>
+                    <div class="input-group">
+                        <input type="radio" name="gender" value="female" id="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="radio" name="gender" value="male" id="male">
+                        <label for="male">Male</label>
+                    </div>
+                </fieldset>
+                <p class="errorMsg">this field is required</p>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Group</legend>
+                    <div class="input-group">
+                        <input type="radio" name="group" value="dw-101" id="dw-101">
+                        <label for="dw-101">Dw-101</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="radio" name="group" value="dw-102" id="dw-102">
+                        <label for="dw-102">Dw-102</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="radio" name="group" value="dw-103" id="dw-103">
+                        <label for="dw-103">Dw-103</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="radio" name="group" value="dm-101" id="dm-101">
+                        <label for="dm-101">Dm-101</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="radio" name="group" value="dm-102" id="dm-102">
+                        <label for="dm-102">Dm-102</label>
+                    </div>
+                </fieldset>
+                <p class="errorMsg">this field is required</p>
+            </div>
+            <div>
+                <fieldset>
+                    <legend><label for="clubs">Clubs</label></legend>
+                    <select name="club" id="clubs" multiple>
+                        <option value="chess">Chess</option>
+                        <option value="robotique">Robotics</option>
+                        <option value="music">Music</option>
+                        <option value="chess">Football</option>
+                        <option value="robotique">Theater</option>
+                        <option value="music">IT</option>
+                    </select>
+                </fieldset>
+                <p class="errorMsg">please select one to three clubs no more no less</p>
+            </div>
             <input type="submit" value="Submit">
         </form>
     </div>
