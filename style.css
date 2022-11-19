@@ -221,7 +221,7 @@ option:checked {
     outline: none;
     background-color: var(--primary-dark-color);
     color: #FFFFFF;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     border-radius: 0.3rem;
 }
