@@ -17,34 +17,49 @@
         <div id="logo">
             <img src="img/Solicode_logo_without_slogan_for_white_BG.svg" alt="Logo">
         </div>
-       <div>
-           <p>Please fill the form down and choose what club you want to join</p>
-           <p>Note : all the fields are required</p>
-       </div>
-        <form action="confirmation.html" >
-            <div>
-                <div class="input-group">
-                    <input type="text" name="firstname" id="name" value="" onkeyup="this.setAttribute('value',this.value);">
-                    <label class="floating-label" for="name">First Name</label>
-                    <p class="errorMsg">First-name must not exceed 30 characters with no special characters or numbers</p>
+        <div>
+            <p>Please fill the form down and choose what club you want to join</p>
+            <p>Note : all the fields are required</p>
+        </div>
+        <form action="confirmation.html">
+            <div id="name-lastName">
+                <div class="input">
+                    <div class="input-group">
+                        <input type="text" name="firstname" id="name" value=""
+                               onkeyup="this.setAttribute('value',this.value);">
+                        <label class="floating-label" for="name">First Name</label>
+                    </div>
+                    <p class="errorMsg">First-name must not exceed 30 characters with no special characters or
+                        numbers</p>
                 </div>
-                <div class="input-group">
-                    <input type="text" name="lastname" onkeyup="this.setAttribute('value',this.value);" id="lastName" value="">
-                    <label class="floating-label" for="lastName">Last Name</label>
-                    <p class="errorMsg">Last-name must not exceed 30 characters with no special characters or numbers</p>
+                <div class="input">
+                    <div class="input-group">
+                        <input type="text" name="lastname" onkeyup="this.setAttribute('value',this.value);"
+                               id="lastName"
+                               value="">
+                        <label class="floating-label" for="lastName">Last Name</label>
+                    </div>
+                    <p class="errorMsg">Last-name must not exceed 30 characters with no special characters or
+                        numbers</p>
                 </div>
             </div>
-            <div class="input-group">
-                <input type="text" id="email" name="email" value="" onkeyup="this.setAttribute('value',this.value);">
-                <label class="floating-label" for="email">E-mail</label>
+            <div class="input">
+                <div class="input-group">
+                    <input type="text" id="email" name="email" value=""
+                           onkeyup="this.setAttribute('value',this.value);">
+                    <label class="floating-label" for="email">E-mail</label>
+                </div>
                 <p class="errorMsg">your email should be in this pattern (name.lastname@ofppt.ma)</p>
             </div>
-            <div class="input-group">
-                <input type="text" id="tele" name="telephone" value="" onkeyup="this.setAttribute('value',this.value);">
-                <label for="tele" class="floating-label">Telephone</label>
+            <div class="input">
+                <div class="input-group">
+                    <input type="text" id="tele" name="telephone" value=""
+                           onkeyup="this.setAttribute('value',this.value);">
+                    <label for="tele" class="floating-label">Telephone</label>
+                </div>
                 <p class="errorMsg">only Moroccan phone format are supported +212(5/6/7) or 0212(5/6/7) or 0(5/6/7)</p>
             </div>
-            <div>
+            <div class="input">
                 <fieldset>
                     <legend>Gendre</legend>
                     <div class="input-group">
@@ -58,7 +73,7 @@
                 </fieldset>
                 <p class="errorMsg">this field is required</p>
             </div>
-            <div>
+            <div class="input">
                 <fieldset>
                     <legend>Group</legend>
                     <div class="input-group">
@@ -84,7 +99,7 @@
                 </fieldset>
                 <p class="errorMsg">this field is required</p>
             </div>
-            <div>
+            <div class="input">
                 <fieldset>
                     <legend><label for="clubs">Clubs</label></legend>
                     <select name="club" id="clubs" multiple>
@@ -100,6 +115,10 @@
             </div>
             <input type="submit" value="Submit">
         </form>
+    </div>
+    <div id="switcher">
+        <input id="checkbox" class="switch-input" type="checkbox"/>
+        <label for="checkbox" class="switch"></label>
     </div>
 </main>
 <script src="script.js"></script>
