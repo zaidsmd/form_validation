@@ -1,10 +1,10 @@
 const nameRE = /^[a-z]{1,30}$/i;
 const emailRE = /^(\w+\.\w+)@ofppt.ma$/i;
 const telephoneRE = /^(((([+0])212)([675]))\d{8})$|^0([675])\d{8}$/i;
-const error = document.querySelectorAll('.errorMsg');
+let error = document.querySelectorAll('.errorMsg');
 const switcher = document.querySelector('[type=checkbox]');
-const inputs = document.querySelectorAll('input');
-const fieldset = document.querySelectorAll('fieldset');
+let inputs = document.querySelectorAll('input');
+let fieldset = document.querySelectorAll('fieldset');
 let button = document.querySelector('[type=submit]');
 document.querySelector("form").addEventListener('submit', e => {
     if (switcher.checked === false) {
@@ -83,6 +83,9 @@ document.querySelector("form").addEventListener('submit', e => {
 
 })
 switcher.addEventListener('change', () => {
+    error = document.querySelectorAll('.errorMsg');
+    inputs = document.querySelectorAll('input');
+    fieldset = document.querySelectorAll('fieldset');
     if (switcher.checked === true) {
         error.forEach(function (e) {
             e.classList.remove('show')
@@ -255,7 +258,7 @@ switcher.addEventListener('change', () => {
             e.classList.remove('notValide');
         })
         button.removeAttribute('disabled')
-        document.querySelectorAll('input').forEach(e => {
+        document.querySelectorAll('input:not([type=checkbox],[type=submit])').forEach(e => {
             e.replaceWith(e.cloneNode(true));
         })
         document.querySelectorAll('option').forEach(e => {
