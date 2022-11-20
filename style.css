@@ -496,6 +496,10 @@ main:has(#thank-you) a:hover {
         flex-direction: column;
     }
 
+    #formSide {
+        padding: 2rem;
+    }
+
     #pic {
         width: 100%;
         height: 20rem;
