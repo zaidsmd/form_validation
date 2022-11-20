@@ -83,6 +83,7 @@ document.querySelector("form").addEventListener('submit', e => {
 
 })
 switcher.addEventListener('change', () => {
+    document.querySelector('form').reset();
     error = document.querySelectorAll('.errorMsg');
     inputs = document.querySelectorAll('input');
     fieldset = document.querySelectorAll('fieldset');
@@ -225,8 +226,8 @@ switcher.addEventListener('change', () => {
                 }
             })
         })
-        document.querySelectorAll('option').forEach((e) => {
-            e.addEventListener('click', () => {
+        document.querySelectorAll('select').forEach((e) => {
+            e.addEventListener('change', () => {
                 if (document.querySelectorAll('option:checked').length === 0 || document.querySelectorAll('option:checked').length > 3) {
                     document.querySelector('fieldset:has(option)').classList.add('notValide');
                     document.querySelector('fieldset:has(option)').classList.remove('valide');
