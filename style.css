@@ -296,6 +296,8 @@ option:checked {
     font-size: 1.5rem;
     cursor: pointer;
     border-radius: 0.3rem;
+    -webkit-transition: all ease-in-out 500ms;
+    -o-transition: all ease-in-out 500ms;
     transition: all ease-in-out 500ms;
 }
 
@@ -336,9 +338,13 @@ option:checked {
 /*///////////////////////////////////////////////////////////////////////////////////*/
 
 main:has(#thank-you) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
     -ms-flex-direction: column;
     padding: 5rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 2rem;
 }
@@ -348,8 +354,15 @@ main:has(#thank-you) #logo {
 }
 
 #thanks {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -368,6 +381,8 @@ main:has(#thank-you) a {
     color: #FFFFFF;
     border-radius: 90rem;
     font-size: 1.5rem;
+    -webkit-transition: all ease-in-out 500ms;
+    -o-transition: all ease-in-out 500ms;
     transition: all ease-in-out 500ms;
 }
 
@@ -392,6 +407,7 @@ main:has(#thank-you) a:hover {
     --switch-thumb-size: calc(var(--switch-height) - var(--switch-border) * 2);
     --switch-width-inside: calc(var(--switch-width) - var(--switch-border) * 2);
     display: block;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: var(--switch-width);
     height: var(--switch-height);
@@ -399,6 +415,8 @@ main:has(#thank-you) a:hover {
     border-radius: var(--switch-height);
     background-color: var(--secondary-dark-color);
     cursor: pointer;
+    -webkit-transition: 300ms 100ms;
+    -o-transition: 300ms 100ms;
     transition: 300ms 100ms;
     position: relative;
 }
@@ -412,6 +430,8 @@ main:has(#thank-you) a:hover {
     position: absolute;
     top: 0;
     left: 0;
+    -webkit-transition: 300ms, width 600ms;
+    -o-transition: 300ms, width 600ms;
     transition: 300ms, width 600ms;
 }
 
@@ -426,6 +446,8 @@ main:has(#thank-you) a:hover {
 
 .switch-input:checked + .switch::before {
     left: 100%;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
     transform: translateX(-100%);
 }
 
@@ -468,6 +490,9 @@ main:has(#thank-you) a:hover {
 
 @media only screen and (max-width: 650px) {
     main {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -477,6 +502,8 @@ main:has(#thank-you) a:hover {
     }
 
     select {
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
     }
 
@@ -526,6 +553,9 @@ main:has(#thank-you) a:hover {
     }
 
     #name-lastName {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         gap: 1rem;
     }
