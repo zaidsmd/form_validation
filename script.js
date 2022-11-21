@@ -69,7 +69,7 @@ document.querySelector("form").addEventListener('submit', e => {
         } else {
             document.querySelector('fieldset:has([name=group])').classList.add('valide')
         }
-        if (selectedClubs.length === 0 || selectedClubs.length >= 3) {
+        if (selectedClubs.length === 0 || selectedClubs.length > 3) {
             document.querySelector('fieldset:has([name=club])').classList.add('notValide')
             key = false
             error[6].classList.add('show')
