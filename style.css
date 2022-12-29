@@ -302,9 +302,9 @@ option:checked {
 }
 
 [type="submit"]:hover {
-    box-shadow: var(--secondary-dark-color) 3px 3px 0;
-    transform: translate(-3px, -3px);
-    color: var(--secondary-color);
+    scale: 1.02;
+    background-color: var(--secondary-dark-color);
+    color: var(--primary-color);
 }
 
 .notValide {
@@ -387,9 +387,9 @@ main:has(#thank-you) a {
 }
 
 main:has(#thank-you) a:hover {
-    box-shadow: var(--secondary-dark-color) 3px 3px 0;
-    transform: translate(-3px, -3px);
-    color: var(--secondary-color);
+    scale: 1.05;
+    background-color: var(--secondary-dark-color);
+    color: var(--primary-color);
 }
 
 :root {
